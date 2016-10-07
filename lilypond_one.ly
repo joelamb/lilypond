@@ -3,54 +3,44 @@ global = {
   \time 4/4
   \dynamicUp
 }
-sopranonotes = \relative c'' {
+sopnotes = \relative c'' {
   c2 \p \< d c d \f
 }
-sopranowords = \lyricmode { do do do do }
 altonotes = \relative c'' {
   c2\p d c d
 }
-altowords = \lyricmode { re re re re }
-tenornotes = {
-  \clef "G_8"
+tenornotes = \relative c' {
   c2\mp d c d
 }
-tenorwords = \lyricmode { mi mi mi mi }
-bassnotes = {
-  \clef bass
+barinotes = \relative c'{
   c2\mf d c d
 }
-basswords = \lyricmode { mi mi mi mi }
 
 \score {
   \new ChoirStaff <<
     \new Staff <<
       \new Voice = "soprano" <<
         \global
-        \sopranonotes
+        \sopnotes
       >>
-      \lyricsto "soprano" \new Lyrics \sopranowords
     >>
     \new Staff <<
       \new Voice = "alto" <<
         \global
         \altonotes
       >>
-      \lyricsto "alto" \new Lyrics \altowords
     >>
     \new Staff <<
       \new Voice = "tenor" <<
         \global
         \tenornotes
       >>
-      \lyricsto "tenor" \new Lyrics \tenorwords
     >>
     \new Staff <<
-      \new Voice = "bass" <<
+      \new Voice = "baritone" <<
         \global
-        \bassnotes
+        \barinotes
       >>
-      \lyricsto "bass" \new Lyrics \basswords
     >>
   >>
 }
