@@ -1,3 +1,5 @@
+\version "2.18.2"
+
 global = {
   \key c \major
   \time 4/4
@@ -19,24 +21,28 @@ barinotes = \relative c'{
 \score {
   \new ChoirStaff <<
     \new Staff <<
+      \set Staff.instrumentName = #"Soprano"
       \new Voice = "soprano" <<
         \global
         \sopnotes
       >>
     >>
     \new Staff <<
+      \set Staff.instrumentName = #"Alto"
       \new Voice = "alto" <<
         \global
         \altonotes
       >>
     >>
     \new Staff <<
+      \set Staff.instrumentName = #"Tenor"
       \new Voice = "tenor" <<
         \global
         \tenornotes
       >>
     >>
     \new Staff <<
+      \set Staff.instrumentName = #"Baritone"
       \new Voice = "baritone" <<
         \global
         \barinotes
