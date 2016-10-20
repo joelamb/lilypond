@@ -1,52 +1,34 @@
-\version "2.18.2"
-
 global = {
   \key c \major
-  \time 4/4
+  \time 3/4
   \dynamicUp
 }
 sopnotes = \relative c'' {
   c2 \p \< d c d \f
+  e f f e
 }
 altonotes = \relative c'' {
-  c2\p d c d
+  g2\p a g a
+  b b c a
 }
 tenornotes = \relative c' {
-  c2\mp d c d
+  e2\mp f e f
+  g a g g
 }
 barinotes = \relative c'{
   c2\mf d c d
+  d4 e g f e d d g
 }
 
 \score {
-  \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.instrumentName = #"Soprano"
-      \new Voice = "soprano" <<
-        \global
-        \sopnotes
-      >>
+    \new StaffGroup <<
+      \new Staff << \global \sopnotes >>
+      \new Staff << \global \altonotes >>
+      \new Staff << \global \tenornotes >>
+      \new Staff << \global \barinotes >>
     >>
-    \new Staff <<
-      \set Staff.instrumentName = #"Alto"
-      \new Voice = "alto" <<
-        \global
-        \altonotes
-      >>
-    >>
-    \new Staff <<
-      \set Staff.instrumentName = #"Tenor"
-      \new Voice = "tenor" <<
-        \global
-        \tenornotes
-      >>
-    >>
-    \new Staff <<
-      \set Staff.instrumentName = #"Baritone"
-      \new Voice = "baritone" <<
-        \global
-        \barinotes
-      >>
-    >>
-  >>
-}
+    \layout {}
+    \midi { }
+  }
+
+    
