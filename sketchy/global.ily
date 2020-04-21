@@ -1,6 +1,6 @@
 global= {
   \time 4/4
-  \tempo "Brightly"
+  \tempo "Lightly"
 }
 
 Key = {
