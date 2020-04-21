@@ -1,6 +1,5 @@
-
 \header {
-	title = "Title"
+	title = "Sketchy"
 	composer = "Joe Lamb"
 	arranger = "arr. Joe Lamb"
 }
