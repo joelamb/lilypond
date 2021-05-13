@@ -7,7 +7,7 @@
 
 \score {
   \new Staff {
-    \set Staff.midiInstrument = # "tenor sax"
+    \set Staff.midiInstrument = # "tenor saxophone"
     \global
     \new Voice {
       \transpose c bes{
